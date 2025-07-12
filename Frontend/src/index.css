@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind CSS теперь должен быть настроен в проекте. Если вы все еще видите ошибки, убедитесь, что сервер разработки перезапущен после внесения изменений в конфигурацию. */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  box-sizing: border-box;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #121212, #1e1e1e);
+  color: #f5f5f5;
+}
+
+.app {
+  text-align: center;
+  transition: background-image 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page-content {
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Добавление закругленных углов для всех квадратных элементов */
+.card, .container, .item, .block, .panel, button, input, textarea, .subscription-button, .trial-button, .profile-button {
+  border-radius: 12px !important;
+}
+
+/* Эффект подсветки при нажатии на кнопки во всем приложении */
+button:active, .subscription-button:active, .trial-button:active, .profile-button:active {
+	color: theme('colors.purple.300') !important;
+  transform: scale(0.95);
+}
+button:hover, .subscription-button:hover, .trial-button:hover, .profile-button:hover, a:hover, .card:hover, .item:hover, .block:hover, .panel:hover {
+  color: theme('colors.purple.300') !important;
+}
+
+/* Дополнительные стили для Readings, чтобы работать даже без Tailwind */
+.page-content h2 {
+  font-size: 1.5rem; /* Эквивалент text-2xl */
+  margin-bottom: 1rem; /* Эквивалент mb-4 */
+  color: #ffd700; /* Эквивалент text-yellow-400 с учетом темы приложения */
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes tiltLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes tiltRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* Удалены неиспользуемые анимации */
+
+/* Адаптивные стили для разных размеров экрана */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+  .page-content {
+    padding: 10px;
+    max-width: 100%;
+  }
+  .page-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .app {
+    padding: 5px;
+  }
+  .page-content {
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .page-content h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}

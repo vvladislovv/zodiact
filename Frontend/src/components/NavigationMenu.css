@@ -1,0 +1,77 @@
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Ширина по содержимому */
+  max-width: 100vw; /* Ограничение по ширине экрана */
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  white-space: nowrap; /* Запрет переноса текста */
+}
+
+.menu-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 12px 24px 0px;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Важно для правильного расчета размеров */
+}
+
+.menu-buttons button {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: clamp(14px, 2vw, 16px); /* Адаптивный размер шрифта */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px); /* Адаптивные отступы */
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin: 0 clamp(2px, 1vw, 5px); /* Адаптивные отступы между кнопками */
+  white-space: nowrap; /* Запрет переноса текста */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Медиа-запрос для очень маленьких экранов */
+@media (max-width: 480px) {
+  .menu-buttons {
+    padding: 8px 12px 0px;
+    justify-content: space-around; /* Равномерное распределение */
+  }
+  .menu-buttons button {
+    padding: 6px 10px;
+    margin: 0 2px;
+    font-size: 14px;
+  }
+}
+
+.bottom-menu button:hover {
+  color: #ffd700;
+  transform: scale(1.05);
+  background: rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.bottom-menu button:active {
+  color: #ffa500;
+  transform: scale(0.95);
+  background: rgba(255, 215, 0, 0.3);
+  transition: all 0.2s ease;
+}

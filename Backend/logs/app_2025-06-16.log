@@ -1,0 +1,101 @@
+2025-06-16 03:40:05 | ERROR | Error handling /start command for Telegram ID 7300593025: 'Database' object does not support the asynchronous context manager protocol
+2025-06-16 03:41:48 | ERROR | Error handling /start command for Telegram ID 7300593025: 'Database' object does not support the asynchronous context manager protocol
+2025-06-16 03:46:55 | INFO | Received /start command from Telegram ID 7300593025
+2025-06-16 03:46:55 | ERROR | Error handling /start command for Telegram ID 7300593025: 'async_generator' object does not support the asynchronous context manager protocol
+2025-06-16 03:47:51 | INFO | Received /start command from Telegram ID 7300593025
+2025-06-16 03:47:51 | INFO | Created new user with Telegram ID 7300593025 on /start command
+2025-06-16 03:48:12 | ERROR | Error in tarot_draw for user 7300593025: 'User' object has no attribute 'id'
+2025-06-16 03:50:07 | ERROR | Error in tarot_draw for user 7300593025: 'User' object has no attribute 'id'
+2025-06-16 03:50:47 | ERROR | Error in tarot_draw for user 7300593025: 'User' object has no attribute 'id'
+2025-06-16 03:53:33 | INFO | Tarot draw completed for user 7300593025 with question: string
+2025-06-16 03:53:37 | INFO | Tarot draw completed for user 7300593025 with question: string
+2025-06-16 03:53:39 | INFO | Tarot draw completed for user 7300593025 with question: string
+2025-06-16 03:53:53 | INFO | Tarot draw completed for user 7300593025 with question: какой будет год?
+2025-06-16 03:53:55 | INFO | Tarot draw completed for user 7300593025 with question: какой будет год?
+2025-06-16 03:55:23 | INFO | Tarot draw completed for user 7300593025 with question: какой будет год?
+2025-06-16 03:55:33 | INFO | Tarot draw completed for user 7300593025 with question: какой будет год?
+2025-06-16 03:55:34 | INFO | Tarot draw completed for user 7300593025 with question: какой будет год?
+2025-06-16 03:56:18 | INFO | Tarot draw completed for user 7300593025 with question: какой будет год?
+2025-06-16 03:56:59 | ERROR | Error retrieving tarot history for user 7300593025: 3 validation errors for TarotHistoryItem
+date
+  Field required [type=missing, input_value={'_id': ObjectId('684f6bb... 16, 3, 56, 18, 419000)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+cards
+  Input should be a valid list [type=list_type, input_value='Ace of Pentacles,The Star,Wheel of Fortune', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+summary
+  Field required [type=missing, input_value={'_id': ObjectId('684f6bb... 16, 3, 56, 18, 419000)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-06-16 03:58:01 | INFO | Retrieved tarot history for user 7300593025
+2025-06-16 04:00:01 | INFO | Coffee fortune completed for user 7300593025 with question: Буду ли я успешный?
+2025-06-16 04:00:08 | INFO | Coffee fortune completed for user 7300593025 with question: Буду ли я успешный?
+2025-06-16 04:13:51 | INFO | Coffee fortune completed for user 7300593025 with question: Буду ли я успешный?
+2025-06-16 04:13:57 | INFO | Coffee fortune completed for user 7300593025 with question: Буду ли я успешный?
+2025-06-16 04:25:31 | INFO | Sending AI prompt request with question: Интерпретируй карты Таро в контексте вопроса: что ...
+2025-06-16 04:25:38 | INFO | Successfully received response from AI
+2025-06-16 04:25:38 | INFO | AI interpretation generated for tarot draw with question: что делать в этом году?...
+2025-06-16 04:25:38 | INFO | Tarot draw completed for user 7300593025 with question: что делать в этом году?
+2025-06-16 04:26:08 | INFO | Retrieved tarot history for user 7300593025
+2025-06-16 04:27:20 | INFO | Sending AI prompt request with question: Интерпретируй изображение кофейной гущи в контекст...
+2025-06-16 04:27:27 | INFO | Successfully received response from AI
+2025-06-16 04:27:27 | INFO | AI interpretation generated for coffee fortune with question: Буду ли я успешный?...
+2025-06-16 04:27:27 | INFO | Coffee fortune completed for user 7300593025 with question: Буду ли я успешный?
+2025-06-16 04:28:07 | INFO | Retrieved profile for user 7300593025
+2025-06-16 04:28:07 | INFO | Sending AI prompt request with question: Проанализируй профиль пользователя 7300593025 и пр...
+2025-06-16 04:28:08 | INFO | Successfully received response from AI
+2025-06-16 04:28:08 | INFO | AI recommendations generated for user 7300593025
+2025-06-16 04:29:41 | INFO | Retrieved profile for user 7300593025
+2025-06-16 04:29:41 | INFO | Sending AI prompt request with question: Проанализируй профиль пользователя 7300593025 и пр...
+2025-06-16 04:29:42 | INFO | Successfully received response from AI
+2025-06-16 04:29:42 | INFO | AI recommendations generated for user 7300593025
+2025-06-16 04:30:56 | INFO | Retrieved profile for user 7300593025
+2025-06-16 04:30:56 | INFO | Sending AI prompt request with question: Проанализируй профиль пользователя 7300593025 и пр...
+2025-06-16 04:30:58 | INFO | Successfully received response from AI
+2025-06-16 04:30:58 | INFO | AI recommendations generated for user 7300593025
+2025-06-16 04:31:02 | INFO | Retrieved profile for user 7300593025
+2025-06-16 04:31:02 | INFO | Sending AI prompt request with question: Проанализируй профиль пользователя 7300593025 и пр...
+2025-06-16 04:31:04 | INFO | Successfully received response from AI
+2025-06-16 04:31:04 | INFO | AI recommendations generated for user 7300593025
+2025-06-16 04:32:02 | INFO | Retrieved profile for user 7300593025
+2025-06-16 04:32:02 | INFO | AI recommendations generated for user 7300593025
+2025-06-16 04:32:04 | INFO | Retrieved profile for user 7300593025
+2025-06-16 04:32:04 | INFO | AI recommendations generated for user 7300593025
+2025-06-16 04:32:05 | INFO | Retrieved profile for user 7300593025
+2025-06-16 04:32:05 | INFO | AI recommendations generated for user 7300593025
+2025-06-16 04:33:44 | INFO | Subscription activated for user 7300593025 with plan monthly, expires on 2025-07-16 04:33:44.403699
+2025-06-16 04:33:47 | INFO | Subscription activated for user 7300593025 with plan monthly, expires on 2025-07-16 04:33:47.775688
+2025-06-16 04:35:07 | INFO | Returned test data for topic 'how_to_use'
+2025-06-16 04:35:45 | INFO | Retrieved list of info topics
+2025-06-16 04:37:11 | INFO | Sending AI prompt request with question: как дела? какие карты выбрать?...
+2025-06-16 04:37:15 | INFO | Successfully received response from AI
+2025-06-16 04:37:55 | INFO | Feedback received from user 7300593025
+2025-06-16 04:37:55 | INFO | Sending AI prompt request with question: Проанализируй этот отзыв и определи его тональност...
+2025-06-16 04:37:56 | ERROR | No valid response choices from AI API
+2025-06-16 04:37:56 | INFO | AI analysis for feedback from user 7300593025: Ошибка при получении ответа от ИИ....
+2025-06-16 04:38:30 | INFO | Feedback received from user 7300593025
+2025-06-16 04:38:30 | INFO | Sending AI prompt request with question: Проанализируй этот отзыв и определи его тональност...
+2025-06-16 04:38:31 | ERROR | No valid response choices from AI API
+2025-06-16 04:38:31 | INFO | AI analysis for feedback from user 7300593025: Ошибка при получении ответа от ИИ....
+2025-06-16 04:47:04 | INFO | Sending AI prompt request with question: Интерпретируй карту карта в контексте вопроса: что...
+2025-06-16 04:47:05 | ERROR | No valid response choices from AI API
+2025-06-16 04:47:05 | INFO | AI interpretation requested for card карта with question: что будет в этом году ...
+2025-06-16 04:47:29 | INFO | User profile accessed: ID=7300593025, Action=ProfileView
+2025-06-16 04:47:32 | INFO | User profile accessed: ID=7300593025, Action=ProfileView
+2025-06-16 04:49:13 | INFO | Sending AI prompt request with question: Интерпретируй карту карта в контексте вопроса: что...
+2025-06-16 04:49:14 | ERROR | No valid response choices from AI API
+2025-06-16 04:49:14 | INFO | AI interpretation requested for card карта with question: что будет в этом году ...
+2025-06-16 04:53:17 | INFO | Sending AI prompt request with question: Интерпретируй карту карта в контексте вопроса: что...
+2025-06-16 04:53:18 | ERROR | No valid response choices from AI API
+2025-06-16 04:53:18 | INFO | AI interpretation requested for card карта with question: что будет в этом году ...
+2025-06-16 04:53:44 | INFO | Sending AI prompt request with question: привет...
+2025-06-16 04:53:45 | ERROR | No valid response choices from AI API
+2025-06-16 04:53:49 | INFO | Sending AI prompt request with question: привет...
+2025-06-16 04:53:50 | ERROR | No valid response choices from AI API
+2025-06-16 04:55:59 | INFO | Sending AI prompt request with question: привет...
+2025-06-16 04:56:00 | ERROR | No valid response choices from AI API
+2025-06-16 04:57:29 | INFO | Sending AI prompt request with question: привет...
+2025-06-16 04:57:30 | ERROR | No valid response choices from AI API
+2025-06-16 05:16:27 | INFO | Sending AI prompt request with question: привет...
+2025-06-16 05:16:28 | ERROR | No valid response choices from AI API
+2025-06-16 05:23:34 | INFO | Received /start command from Telegram ID 7300593025
+2025-06-16 05:23:34 | INFO | User with Telegram ID 7300593025 already exists, skipping registration

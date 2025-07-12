@@ -1,0 +1,276 @@
+.coffee-reading {
+  background-color: rgba(40, 40, 50, 0.7);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 1.5rem; /* Более закругленные углы */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 215, 0, 0.1);
+  color: #f5f5f5;
+  animation: fadeIn 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 215, 0, 0.3) rgba(255, 255, 255, 0.1);
+}
+
+.coffee-reading::-webkit-scrollbar {
+  width: 8px;
+}
+
+.coffee-reading::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.coffee-reading::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.3);
+  border-radius: 4px;
+}
+
+.coffee-reading::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.5);
+}
+
+.coffee-reading h3 {
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-weight: 700;
+}
+
+.coffee-reading p {
+  color: #f0f0f0;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.coffee-reading .text-block {
+  background-color: rgba(255, 215, 0, 0.08);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.coffee-reading .text-block:hover {
+  background-color: rgba(255, 215, 0, 0.15);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.coffee-reading label {
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+.coffee-reading textarea, .coffee-reading input {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 0.5rem; /* Закругленные углы для полей */
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+
+.coffee-reading textarea:focus, .coffee-reading input:focus {
+  outline: none;
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+.coffee-textarea {
+  resize: none;
+}
+
+.coffee-input {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .coffee-reading {
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
+    border-radius: 1.25rem; /* Сохранение закругленных углов на мобильных */
+    max-width: 95%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 215, 0, 0.1);
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 215, 0, 0.3) rgba(255, 255, 255, 0.1);
+  }
+  
+  .coffee-reading::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .coffee-reading::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .coffee-reading::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 4px;
+  }
+  
+  .coffee-reading::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.5);
+  }
+  
+  .coffee-reading h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
+  }
+  
+  .coffee-reading p {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+  
+  .coffee-reading label {
+    font-size: 0.875rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .coffee-textarea, .coffee-input {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 0.5rem; /* Более закругленные углы для полей */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.75rem;
+  }
+  
+  .coffee-reading button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem; /* Более закругленные углы для кнопки */
+    width: 90%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 360px) {
+  .coffee-reading {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    max-width: 98%;
+    max-height: 65vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 215, 0, 0.3) rgba(255, 255, 255, 0.1);
+  }
+  
+  .coffee-reading::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .coffee-reading::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .coffee-reading::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 4px;
+  }
+  
+  .coffee-reading::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.5);
+  }
+  
+  .coffee-reading h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coffee-reading p {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  .coffee-reading label {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .coffee-textarea, .coffee-input {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coffee-reading button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+    width: 95%;
+    max-width: 220px;
+  }
+}
+
+.coffee-textarea::placeholder, .coffee-input::placeholder {
+  color: rgba(224, 224, 224, 0.7);
+  font-style: italic;
+}
+
+.coffee-reading button {
+  background-color: #ecc94b;
+  color: #1a202c;
+  border: none;
+  border-radius: 0.5rem; /* Закругленные углы для кнопки */
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.coffee-reading button:hover {
+  background-color: #d69e2e;
+  transform: scale(1.05);
+}
+
+.coffee-reading .subscription-button {
+  background-color: #ecc94b;
+  color: #1a202c;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.coffee-reading .subscription-button:hover {
+  background-color: #d69e2e;
+  transform: scale(1.05);
+}
+
+.coffee-reading .subscription-button:active {
+  transform: scale(0.95);
+}

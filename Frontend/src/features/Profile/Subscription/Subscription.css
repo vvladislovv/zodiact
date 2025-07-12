@@ -1,0 +1,223 @@
+.subscription-container {
+  background-color: rgba(60, 70, 80, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 215, 0, 0.1);
+  color: #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+  margin: 1.5rem auto;
+  animation: fadeIn 0.5s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* Оптимизация для мобильных устройств и Telegram Mini App */
+@media (max-width: 480px) {
+  .subscription-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  
+  .subscription-container h3 {
+    font-size: 1.25rem;
+  }
+  
+  .subscription-container p {
+    font-size: 0.875rem;
+  }
+  
+  .tariff-list {
+    max-height: 250px; /* Уменьшаем высоту на мобильных устройствах */
+  }
+  
+  .tariff-item {
+    padding: 0.75rem;
+  }
+  
+  .tariff-item h4 {
+    font-size: 1rem;
+  }
+  
+  .tariff-item p {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subscription-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    width: 90%;
+    max-width: 180px;
+  }
+  
+  .trial-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    width: 95%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 360px) {
+  .subscription-container {
+    padding: 0.75rem;
+    margin: 0.75rem auto;
+  }
+  
+  .subscription-container h3 {
+    font-size: 1.125rem;
+  }
+  
+  .subscription-container p {
+    font-size: 0.75rem;
+  }
+  
+  .tariff-list {
+    max-height: 220px;
+  }
+  
+  .tariff-item {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tariff-item h4 {
+    font-size: 0.875rem;
+  }
+  
+  .tariff-item p {
+    font-size: 0.6875rem;
+  }
+  
+  .subscription-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+    width: 95%;
+    max-width: 160px;
+  }
+  
+  .trial-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    width: 98%;
+    max-width: 220px;
+  }
+}
+
+.subscription-container h3 {
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+
+.subscription-container p {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tariff-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.tariff-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tariff-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.tariff-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.3);
+  border-radius: 4px;
+}
+
+.tariff-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.5);
+}
+
+.tariff-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tariff-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.tariff-item h4 {
+  color: #ffd700;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.tariff-item p {
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.subscription-button {
+  background-color: #ecc94b;
+  color: #1a202c;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  max-width: 200px;
+}
+
+.subscription-button:hover {
+  background-color: #d69e2e;
+  transform: scale(1.05);
+}
+
+.subscription-button:active {
+  transform: scale(0.95);
+}
+
+.trial-button {
+  background-color: #ecc94b;
+  color: #1a202c;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  display: block;
+  width: 90%;
+  max-width: 300px;
+}
+
+.trial-button:hover {
+  background-color: #d69e2e;
+  transform: scale(1.05);
+}
+
+.trial-button:active {
+  transform: scale(0.95);
+}

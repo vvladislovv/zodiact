@@ -1,0 +1,46 @@
+2025-07-06 14:19:50 | INFO | Sending AI prompt request with question: Проанализируй ситуацию на основе выбранных карт (и...
+2025-07-06 14:19:51 | ERROR | No valid response choices from AI API
+2025-07-06 14:19:51 | INFO | Situation analysis generated for user 7300593025
+2025-07-06 14:20:14 | INFO | User profile accessed: ID=7300593025, Action=ProfileView
+2025-07-06 14:20:14 | INFO | User profile accessed: ID=7300593025, Action=ProfileView
+2025-07-06 15:15:59 | INFO | User profile accessed: ID=7300593025, Action=ProfileView
+2025-07-06 15:16:47 | INFO | User profile accessed: ID=7300593025, Action=ProfileView
+2025-07-06 15:16:56 | INFO | User profile accessed: ID=7300593025, Action=ProfileView
+2025-07-06 15:25:50 | INFO | Sending AI prompt request with question: Интерпретируй руны для анализа отношений. Выбранны...
+2025-07-06 15:25:51 | ERROR | No valid response choices from AI API
+2025-07-06 15:25:51 | INFO | Runes reveal interpretation generated for user 7300593025
+2025-07-06 15:29:09 | INFO | Sending AI prompt request with question: Составь персональный прогноз на основе выбранных к...
+2025-07-06 15:29:10 | ERROR | No valid response choices from AI API
+2025-07-06 15:29:10 | INFO | Personal forecast generated for user 7300593025
+2025-07-06 15:29:16 | INFO | Sending AI prompt request with question: Интерпретируй карты Таро. Выбранные карты (индексы...
+2025-07-06 15:29:17 | ERROR | No valid response choices from AI API
+2025-07-06 15:29:17 | INFO | Tarot reveal interpretation generated for user 7300593025
+2025-07-06 15:45:23 | ERROR | Error in situation analysis for user unknown: Request.__init__() missing 1 required positional argument: 'scope'
+2025-07-06 15:47:22 | INFO | Received analyze request for user unknown with data: cards=[4, 2, 0, 3, 1], category=
+2025-07-06 15:47:22 | INFO | Sending AI prompt request with question: Проанализируй ситуацию на основе выбранных карт (и...
+2025-07-06 15:47:23 | ERROR | No valid response choices from AI API
+2025-07-06 15:47:23 | INFO | Situation analysis generated for user unknown
+2025-07-06 15:47:28 | INFO | Received analyze request for user unknown with data: cards=[4, 2, 0, 3, 1], category=
+2025-07-06 15:47:28 | INFO | Sending AI prompt request with question: Проанализируй ситуацию на основе выбранных карт (и...
+2025-07-06 15:47:29 | ERROR | No valid response choices from AI API
+2025-07-06 15:47:29 | INFO | Situation analysis generated for user unknown
+2025-07-06 20:09:23 | INFO | Received runes-reveal request for user unknown with data: runes=[5, 0, 8], relationshipAspect=Текущее состояние, runeAspect=Партнер
+2025-07-06 20:09:23 | INFO | Sending AI prompt request with question: Интерпретируй руны для анализа отношений. Выбранны...
+2025-07-06 20:09:24 | ERROR | No valid response choices from AI API
+2025-07-06 20:09:24 | INFO | Runes reveal interpretation generated for user unknown
+2025-07-06 23:13:05 | INFO | Received personal-forecast request for user 7300593025 with data: cards=[2, 4, 0], category=Итог
+2025-07-06 23:13:05 | INFO | Sending AI prompt request with question: Составь персональный прогноз на основе выбранных к...
+2025-07-06 23:13:06 | ERROR | No valid response choices from AI API
+2025-07-06 23:13:06 | INFO | Personal forecast generated for user 7300593025
+2025-07-07 00:01:40 | INFO | Received spiritual-growth request for user 7300593025 with data: cards=[2], aspect=Текущий уровень
+2025-07-07 00:01:40 | INFO | Sending AI prompt request with question: Дай совет по духовному росту на основе выбранной к...
+2025-07-07 00:01:41 | ERROR | No valid response choices from AI API
+2025-07-07 00:01:41 | INFO | Spiritual growth advice generated for user 7300593025
+2025-07-07 00:01:46 | INFO | Received spiritual-growth request for user 7300593025 with data: cards=[2], aspect=Текущий уровень
+2025-07-07 00:01:46 | INFO | Sending AI prompt request with question: Дай совет по духовному росту на основе выбранной к...
+2025-07-07 00:01:47 | ERROR | No valid response choices from AI API
+2025-07-07 00:01:47 | INFO | Spiritual growth advice generated for user 7300593025
+2025-07-07 00:06:03 | INFO | Received spiritual-growth request for user 7300593025 with data: cards=[0], aspect=Текущий уровень
+2025-07-07 00:06:03 | INFO | Sending AI prompt request with question: Дай совет по духовному росту на основе выбранной к...
+2025-07-07 00:06:04 | ERROR | No valid response choices from AI API
+2025-07-07 00:06:04 | INFO | Spiritual growth advice generated for user 7300593025

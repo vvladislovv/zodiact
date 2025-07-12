@@ -1,0 +1,29 @@
+[project]
+name = "zodiacbot"
+version = "0.1.0"
+description = "A bot and API for Zodiac-related functionalities"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn>=0.20.0",
+    "aiogram>=3.3.0",
+    "python-dotenv>=1.0.0",
+    "sqlalchemy>=2.0.41",
+    "pymongo>=4.13.1",
+    "requests>=2.32.4",
+    "loguru>=0.7.3",
+    "motor>=3.7.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.2.0",
+    "black>=22.10.0",
+    "isort>=5.10.1"
+]
+
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
