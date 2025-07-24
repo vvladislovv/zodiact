@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { getPersonalForecast } from '../../utils/api';
 import { useNavigate } from 'react-router-dom';
 import FanCards from '../../components/FanCards';
+import SquareCards from '../../components/SquareCards';
 import Modal from '../../components/Modal';
+import { cards2, handsBackground } from '../../assets/images';
 
 const PersonalForecast: React.FC = () => {
   const navigate = useNavigate();
@@ -16,6 +18,7 @@ const PersonalForecast: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState<string>("");
+  const [useSquareCards, setUseSquareCards] = useState(false);
 
   const cardCount = 5;
   const cardsArray = Array.from({ length: cardCount }, (_, i) => i);
@@ -46,7 +49,7 @@ const PersonalForecast: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-900/60 backdrop-blur-lg border border-purple-300/20 rounded-xl mx-auto my-4 max-w-4xl max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden text-white" style={{ backgroundImage: 'url(/assets/backgrounds/backgroundFull.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+    <div className="p-6 bg-gray-900/60 backdrop-blur-lg border border-purple-300/20 rounded-xl mx-auto my-4 max-w-4xl max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden text-white" style={{ backgroundImage: `url(${handsBackground})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
       <button 
         onClick={handleBack}
         className="mb-4 flex items-center text-purple-300 hover:text-purple-400 transition-colors duration-200"
@@ -60,27 +63,62 @@ const PersonalForecast: React.FC = () => {
       
       
       <div className="mt-6">
+        {/* Toggle button for card layout */}
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => setUseSquareCards(!useSquareCards)}
+            className="px-4 py-2 bg-purple-400/20 hover:bg-purple-400/30 text-purple-300 rounded-lg border border-purple-400/30 transition-colors duration-200 text-sm"
+          >
+            {useSquareCards ? 'Веерные карты' : 'Квадратные карты'}
+          </button>
+        </div>
        
         <div className="flex justify-center mb-16 mt-10 relative">
-          <FanCards
-            cards={cardsArray}
-            selected={selectedCards}
-            revealed={revealedCards}
-            onSelect={(index) => {
-              if (selectedCards.includes(index)) {
-                setSelectedCards(selectedCards.filter(i => i !== index));
-              } else if (selectedCards.length < 3) {
-                setSelectedCards([...selectedCards, index]);
-              }
-            }}
-            width={440}
-            height={130}
-            cardWidth={70}
-            cardHeight={105}
-            backgroundImage={'/src/assets/backgrounds/category/Hands.jpg'}
-            labelPrefix="Карта"
-            allowMultiSelect={true}
-          />
+          {useSquareCards ? (
+            <SquareCards
+              cards={cardsArray}
+              selected={selectedCards}
+              revealed={revealedCards}
+              onSelect={(index) => {
+                if (selectedCards.includes(index)) {
+                  setSelectedCards(selectedCards.filter(i => i !== index));
+                } else if (selectedCards.length < 3) {
+                  setSelectedCards([...selectedCards, index]);
+                }
+              }}
+              cardSize={100}
+              backgroundImages={[
+                cards2,
+                cards2,
+                cards2,
+                cards2,
+                cards2
+              ]}
+              labelPrefix="Карта"
+              allowMultiSelect={true}
+              columns={5}
+            />
+          ) : (
+            <FanCards
+              cards={cardsArray}
+              selected={selectedCards}
+              revealed={revealedCards}
+              onSelect={(index) => {
+                if (selectedCards.includes(index)) {
+                  setSelectedCards(selectedCards.filter(i => i !== index));
+                } else if (selectedCards.length < 3) {
+                  setSelectedCards([...selectedCards, index]);
+                }
+              }}
+              width={440}
+              height={130}
+              cardWidth={70}
+              cardHeight={105}
+              backgroundImage={cards2}
+              labelPrefix="Карта"
+              allowMultiSelect={true}
+            />
+          )}
         </div>
         <div className="flex justify-between mb-4 overflow-x-hidden">
           <button className={`flex-1 p-1 border rounded-lg text-center mx-1 min-w-0 transition-colors duration-200 ${selectedCategory === 'Причина' ? 'border-purple-400/60 bg-purple-400/30' : 'border-purple-400/30 bg-purple-400/20 hover:bg-purple-400/30'}`} onClick={() => setSelectedCategory('Причина')}>

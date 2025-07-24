@@ -1,9 +1,9 @@
-version: '3.8'
-
 services:
   backend:
     build:
       context: ./Backend
+      cache_from:
+        - python:3.9-slim
     ports:
       - "8000:8000"
     restart: unless-stopped
@@ -17,6 +17,9 @@ services:
   frontend:
     build:
       context: ./Frontend
+      cache_from:
+        - node:20-alpine
+        - nginx:alpine
     ports:
       - "5713:5713"
     restart: unless-stopped

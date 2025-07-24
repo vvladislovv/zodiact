@@ -1,41 +1,56 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// Import images
+import square1 from '../../../assets/images/squares/new-square1.jpg';
+import square2 from '../../../assets/images/squares/new-square2.jpg';
+import square3 from '../../../assets/images/squares/new-square3.jpg';
+import square4 from '../../../assets/images/squares/new-square4.jpg';
+import square5 from '../../../assets/images/squares/new-square5.jpg';
+import runicBackground from '../../../assets/images/runes/runic-blue.jpg';
+import coffeeBackground from '../../../assets/images/coffee-astrology.jpg';
+
 const sampleSquares = [
   { 
     title: 'Анализ ситуации',
     path: '/situation-analysis',
-    background: '/assets/backgrounds/backenCard.jpg',
+    background: square1,
     description: 'Получите глубокий анализ вашей текущей жизненной ситуации и советы для принятия решений.'
   },
   { 
     title: 'Состояние взаимоотношений',
     path: '/relationship-status',
-    background: '/assets/backgrounds/backenCard.jpg',
+    background: square2,
     description: 'Узнайте, в каком состоянии находятся ваши отношения и получите рекомендации для их улучшения.'
   },
   { 
     title: 'Персональный прогноз',
     path: '/personal-forecast',
-    background: '/assets/backgrounds/backenCard.jpg',
+    background: square3,
     description: 'Персональный прогноз на будущее: что вас ждет в ближайшее время и как подготовиться.'
   },
   { 
     title: 'Духовное развитие',
     path: '/spiritual-growth',
-    background: '/assets/backgrounds/backenCard.jpg',
+    background: square4,
     description: 'Исследуйте свой духовный путь, получите совет и рекомендации для роста.'
   },
   { 
     title: 'Гадание на Таро',
     path: '/tarot-reading',
-    background: '/assets/backgrounds/backenCard.jpg',
+    background: square5,
     description: 'Получите предсказание на Таро по интересующему вас вопросу или ситуации.'
+  },
+  { 
+    title: 'Гадание на Рунах',
+    path: '/rune-reading',
+    background: runicBackground,
+    description: 'Древнее скандинавское гадание на рунах для получения мудрых советов и предсказаний.'
   },
   {
     title: 'Гадание на кофе',
     path: '/coffee-reading',
-    background: '/assets/backgrounds/backenCard.jpg',
+    background: coffeeBackground,
     description: 'Уникальное гадание на кофейной гуще: откройте тайны будущего по символам на чашке.'
   },
 ];
@@ -73,7 +88,7 @@ const Home: React.FC = () => {
           {sampleSquares.map((square, index) => (
             <div 
               key={index}
-              className="square-item w-full h-48 md:h-56 relative text-white rounded-2xl shadow-lg cursor-pointer transform transition-all duration-300 hover:border-purple-300 hover:shadow-[0_0_10px_rgba(147,51,234,0.5)] border border-transparent hover:-translate-y-1 overflow-hidden"
+              className="square-item w-full aspect-square relative text-white rounded-2xl shadow-lg cursor-pointer transform transition-all duration-300 hover:border-purple-300 hover:shadow-[0_0_10px_rgba(147,51,234,0.5)] border border-transparent hover:-translate-y-1 overflow-hidden"
               style={{ 
                 opacity: 0, 
                 transform: 'translateY(10px)', 

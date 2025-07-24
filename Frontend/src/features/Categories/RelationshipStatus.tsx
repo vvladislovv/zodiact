@@ -3,6 +3,7 @@ import { revealRunes } from '../../utils/api';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../components/Modal';
 import FanCards from '../../components/FanCards';
+import { cards2, handsBackground } from '../../assets/images';
 
 const RelationshipStatus: React.FC = () => {
   const navigate = useNavigate();
@@ -78,7 +79,7 @@ const RelationshipStatus: React.FC = () => {
   const cardsArray = Array.from({ length: cardCount }, (_, i) => i);
 
   return (
-    <div className="min-h-screen flex flex-col flex-grow p-6 pb-28 bg-gray-900/60 backdrop-blur-lg border border-purple-300/20 shadow-[0_4px_6px_rgba(0,0,0,0.1),0_0_10px_rgba(147,51,234,0.1)] rounded-xl mx-auto max-w-4xl w-full overflow-y-auto text-white" style={{ backgroundImage: 'url(/assets/backgrounds/backgroundFull.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+    <div className="min-h-screen flex flex-col flex-grow p-6 pb-28 bg-gray-900/60 backdrop-blur-lg border border-purple-300/20 shadow-[0_4px_6px_rgba(0,0,0,0.1),0_0_10px_rgba(147,51,234,0.1)] rounded-xl mx-auto max-w-4xl w-full overflow-y-auto text-white" style={{ backgroundImage: `url(${handsBackground})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
       <button 
         onClick={handleBack}
         className="mb-4 flex items-center text-purple-300 hover:text-purple-400 transition-colors duration-200"
@@ -103,7 +104,7 @@ const RelationshipStatus: React.FC = () => {
             height={120}
             cardWidth={60}
             cardHeight={90}
-            backgroundImage={'/src/assets/backgrounds/category/Hands.jpg'}
+            backgroundImage={cards2}
             labelPrefix="Руна"
             allowMultiSelect={true}
           />

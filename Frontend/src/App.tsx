@@ -12,10 +12,15 @@ import CoffeeReading from './features/Categories/CoffeeReading';
 import PersonalForecast from './features/Categories/PersonalForecast';
 import SpiritualGrowth from './features/Categories/SpiritualGrowth';
 import TarotReading from './features/Categories/TarotReading';
+import RuneReading from './features/Categories/RuneReading';
 import Subscription from './features/Profile/Subscription/Subscription';
 import NavigationMenu from './components/NavigationMenu';
 import InfoButton from './components/InfoButton';
 import NotFound from './features/NotFound/NotFound';
+
+// Импортируем все изображения для включения в сборку
+import * as images from './assets/images';
+import { backgroundFon } from './assets/images';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,7 +56,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-cover bg-center flex flex-col bg-no-repeat bg-fixed w-full overflow-x-hidden relative" 
-         style={{ backgroundImage: `url('/src/assets/backgrounds/FON.png')`, backgroundSize: 'cover' }}>
+         style={{ backgroundImage: `url(${backgroundFon})`, backgroundSize: 'cover' }}>
       <div className="absolute inset-0 bg-black bg-opacity-35 backdrop-blur-[5px] z-0"></div>
       
         <InfoButton onClick={() => {}} />
@@ -74,6 +79,7 @@ function App() {
               <Route path="/personal-forecast" element={<PersonalForecast />} />
               <Route path="/spiritual-growth" element={<SpiritualGrowth />} />
               <Route path="/tarot-reading" element={<TarotReading />} />
+              <Route path="/rune-reading" element={<RuneReading />} />
               <Route path="/not-found" element={<NotFound />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

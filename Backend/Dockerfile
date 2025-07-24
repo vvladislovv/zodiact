@@ -1,7 +1,7 @@
 # Базовый образ с Python
 FROM python:3.9-slim
 
-# Установка необходимых пакетов
+# Установка системных зависимостей
 RUN apt-get update && apt-get install -y \
     gcc \
     && rm -rf /var/lib/apt/lists/*
@@ -9,15 +9,17 @@ RUN apt-get update && apt-get install -y \
 # Установка рабочей директории
 WORKDIR /app
 
-# Копирование файлов проекта
+# Копируем только файлы зависимостей для кеширования
 COPY pyproject.toml ./
+
+# Устанавливаем зависимости (этот слой будет кешироваться)
+RUN pip install --no-cache-dir .
+
+# Копируем остальной код
 COPY . .
 
-# Установка зависимостей через pip
-RUN pip install --no-cache-dir -r pyproject.toml || pip install --no-cache-dir .
-
-# Открытие порта для FastAPI
+# Открываем порт
 EXPOSE 8000
 
-# Команда для запуска приложения
+# Запускаем приложение
 CMD ["python", "main.py"]

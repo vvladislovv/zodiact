@@ -3,6 +3,7 @@ import { getCoffeeFortune } from '../../../utils/api';
 import { type ReadingContent, CoffeeContent } from '../ReadingContent';
 import CoffeeForm from './CoffeeForm';
 import ContentDisplay from './ContentDisplay';
+import coffeeBackground from '../../../assets/images/coffee-astrology.jpg';
 
 interface CoffeeReadingProps {
   title: string;
@@ -53,9 +54,22 @@ const CoffeeReading: React.FC<CoffeeReadingProps> = ({ title, description, onSel
   };
 
   return (
-    <div className="backdrop-blur-lg border border-purple-500/20 shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_15px_rgba(147,51,234,0.15)] rounded-3xl p-8 mb-6 max-w-lg mx-auto min-h-[50vh] max-h-[80vh] overflow-y-auto text-gray-200 flex flex-col items-center animate-fadeIn">
+    <div className="backdrop-blur-lg border border-purple-500/20 shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_15px_rgba(147,51,234,0.15)] rounded-3xl p-8 mb-6 max-w-lg mx-auto min-h-[50vh] max-h-[80vh] overflow-y-auto text-gray-200 flex flex-col items-center animate-fadeIn relative">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 rounded-3xl opacity-20"
+        style={{
+          backgroundImage: `url(${coffeeBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       
+      {/* Content overlay */}
+      <div className="relative z-10 w-full">
         <CoffeeForm onSelect={onSelect || handleFormSubmit} />
+      </div>
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-gray-800 border border-purple-500/20 rounded-lg p-6 max-w-md w-full max-h-[80vh] overflow-y-auto text-white relative">

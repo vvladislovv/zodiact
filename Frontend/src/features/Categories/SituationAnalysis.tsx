@@ -3,6 +3,7 @@ import { analyzeSituation } from '../../utils/api';
 import { useNavigate } from 'react-router-dom';
 import FanCards from '../../components/FanCards';
 import Modal from '../../components/Modal';
+import { cards2, handsBackground } from '../../assets/images';
 
 const SituationAnalysis: React.FC = () => {
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ const SituationAnalysis: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-700/60 backdrop-blur-lg border border-purple-300/20 shadow-[0_4px_6px_rgba(0,0,0,0.1),0_0_10px_rgba(147,51,234,0.1)] rounded-xl mx-auto my-4 max-w-4xl max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden text-white" style={{ backgroundImage: 'url(/assets/backgrounds/backgroundFull.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
+    <div className="p-6 bg-gray-700/60 backdrop-blur-lg border border-purple-300/20 shadow-[0_4px_6px_rgba(0,0,0,0.1),0_0_10px_rgba(147,51,234,0.1)] rounded-xl mx-auto my-4 max-w-4xl max-h-[calc(100vh-100px)] overflow-y-auto overflow-x-hidden text-white" style={{ backgroundImage: `url(${handsBackground})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
       <button 
         onClick={handleBack}
         className="mb-4 flex items-center text-purple-300 hover:text-purple-400 transition-colors duration-200"
@@ -75,7 +76,7 @@ const SituationAnalysis: React.FC = () => {
             height={130}
             cardWidth={70}
             cardHeight={105}
-            backgroundImage={'/src/assets/backgrounds/category/Hands.jpg'}
+            backgroundImage={cards2}
             labelPrefix="Карта"
             allowMultiSelect={true}
           />

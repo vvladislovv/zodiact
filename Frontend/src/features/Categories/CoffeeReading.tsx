@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import CoffeeReadingComponent from '../Readings/CoffeeReading/CoffeeReading';
+import { coffeeAstrology } from '../../assets/images';
 
 const CoffeeReading: React.FC = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const CoffeeReading: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-900/60 backdrop-blur-lg border border-purple-300/20 shadow-[0_4px_6px_rgba(0,0,0,0.1),0_0_10px_rgba(147,51,234,0.1)] rounded-xl mx-auto my-4 max-w-4xl min-h-screen overflow-y-auto text-white" style={{ backgroundImage: 'url(/assets/backgrounds/backgroundFull.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+    <div className="p-6 bg-gray-900/60 backdrop-blur-lg border border-purple-300/20 shadow-[0_4px_6px_rgba(0,0,0,0.1),0_0_10px_rgba(147,51,234,0.1)] rounded-xl mx-auto my-4 max-w-4xl min-h-screen overflow-y-auto text-white" style={{ backgroundImage: `url(${coffeeAstrology})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
       <button 
         onClick={handleBack}
         className="mb-4 flex items-center text-purple-300 hover:text-purple-400 transition-colors duration-200"
